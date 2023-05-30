@@ -1,0 +1,49 @@
+:root {
+  --background-color: #F2F7F5;
+  --title-color: #00473E;
+  --paragraphe-color: #475D5B;
+  --button-color: #FAAE2B;
+}
+
+main {
+  height: 100vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title__group_infos{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+img {
+  height: 35vh;
+}
+
+.adress__chalet {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.show_formulaire {
+  background-color: var(--button-color);
+  padding: 0.5rem 1.5rem;
+}
+
+.description__chalet {
+  margin-bottom: 1.5rem;
+}

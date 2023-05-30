@@ -1,0 +1,36 @@
+.calendar {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+}
+
+.calendar th, .calendar td {
+    text-align: center;
+    padding: 10px;
+}
+.calendar th {
+    background-color: var(--button-color);
+    border: 1px solid var(--title-color);
+}
+.calendar td {
+    border: 1px solid var(--title-color);
+}
+.calendar .current-day {
+    background-color: var(--paragraphe-color);
+}
+.calendar .controls {
+    margin-bottom: 10px;
+}
+
+@media only screen 
+   and (max-width : 834px) {
+    .calendar th, .calendar td {
+        padding: 15px;
+    }
+}
+
+@media only screen 
+   and (max-width : 414px) {
+    .calendar th, .calendar td {
+        padding: 8px;
+    }
+}
