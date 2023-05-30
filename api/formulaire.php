@@ -12,6 +12,8 @@ try {
     // Configuration des options PDO
     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+    echo 'debut';
+
     // Vérifier si les paramètres chalet_id et date_reservation sont présents dans la requête GET
     if (isset($_GET['chalet_id']) && isset($_GET['date_reservation']) && isset($_GET['nom'])
     && isset($_GET['prenom']) && isset($_GET['email']) && isset($_GET['telephone']) 
@@ -24,11 +26,11 @@ try {
         $email = $_GET['email'];
         $telephone = $_GET['telephone'];
         $nombrePersonnes = $_GET['nombre_personnes'];
-        $petitDejeuner = isset($_GET['petit_dejeuner']) ? 1 : 0;
-        $repas = isset($_GET['repas']) ? 1 : 0;
-        $spa = isset($_GET['spa']) ? 1 : 0;
-        $allIn = isset($_GET['all_in']) ? 1 : 0;
-
+        $petitDejeuner = $_GET['petit_dejeuner'];
+        $repas = $_GET['repas'];
+        $spa = $_GET['spa'];
+        $allIn = $_GET['all_in'];
+        echo 'requete sql';
         // Requête d'insertion des données dans la table "reservations"
         $sql = "INSERT INTO reservations (chalet_id, date_reservation, nom, prenom, email, telephone, nombre_personnes, petit_dejeuner, repas, spa, all_in)
                 VALUES (:chalet_id, :date_reservation, :nom, :prenom, :email, :telephone, :nombre_personnes, :petit_dejeuner, :repas, :spa, :all_in)";

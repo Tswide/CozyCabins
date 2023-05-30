@@ -177,10 +177,9 @@ dateCells.forEach(function (cell) {
       console.error('Erreur lors de la vérification de la réservation :', error);
     });
 
-    document.getElementById('button_submit').addEventListener('click', function(){
-      // sendReservationToDatabase(date, chaletId, nom, prenom, email, telephone, nombrePersonnes, petitDejeuner, repas, spa, allIn);
-      console.log('hello')
-    })
+    // document.getElementById('button_submit').addEventListener('click', function(){
+    //   sendReservationToDatabase(date, chaletId, nom, prenom, email, telephone, nombrePersonnes, petitDejeuner, repas, spa, allIn);
+    // })
   });
 });
 
@@ -203,34 +202,34 @@ function checkReservationExists(date, chaletId) {
 }
 
 
-// Envoyer les informations de réservation à la base de données avec l'ID du chalet comme signature
-function sendReservationToDatabase(date, chaletId, nom, prenom, email, telephone, nombrePersonnes, petitDejeuner, repas, spa, allIn) {
-  // Construire l'URL avec les paramètres de requête
-  let urlForm = 'http://localhost/CozyCabins/api/formulaire.php';
-  urlForm += '?chalet_id=' + encodeURIComponent(chaletId);
-  urlForm += '&date_reservation=' + encodeURIComponent(date);
-  urlForm += '&nom=' + encodeURIComponent(nom);
-  urlForm += '&prenom=' + encodeURIComponent(prenom);
-  urlForm += '&email=' + encodeURIComponent(email);
-  urlForm += '&telephone=' + encodeURIComponent(telephone);
-  urlForm += '&nombre_personnes=' + encodeURIComponent(nombrePersonnes);
-  urlForm += '&petit_dejeuner=' + encodeURIComponent(petitDejeuner);
-  urlForm += '&repas=' + encodeURIComponent(repas);
-  urlForm += '&spa=' + encodeURIComponent(spa);
-  urlForm += '&all_in=' + encodeURIComponent(allIn);
+// // Envoyer les informations de réservation à la base de données avec l'ID du chalet comme signature
+// function sendReservationToDatabase(date, chaletId, nom, prenom, email, telephone, nombrePersonnes, petitDejeuner, repas, spa, allIn) {
+//   // Construire l'URL avec les paramètres de requête
+//   let urlForm = 'http://localhost/CozyCabins/api/formulaire.php';
+//   urlForm += '?chalet_id=' + encodeURIComponent(chaletId);
+//   urlForm += '&date_reservation=' + encodeURIComponent(date);
+//   urlForm += '&nom=' + encodeURIComponent(nom);
+//   urlForm += '&prenom=' + encodeURIComponent(prenom);
+//   urlForm += '&email=' + encodeURIComponent(email);
+//   urlForm += '&telephone=' + encodeURIComponent(telephone);
+//   urlForm += '&nombre_personnes=' + encodeURIComponent(nombrePersonnes);
+//   urlForm += '&petit_dejeuner=' + encodeURIComponent(petitDejeuner);
+//   urlForm += '&repas=' + encodeURIComponent(repas);
+//   urlForm += '&spa=' + encodeURIComponent(spa);
+//   urlForm += '&all_in=' + encodeURIComponent(allIn);
 
-  // Effectuer une requête GET pour envoyer les informations de réservation
-  return fetch(urlForm)
-    .then(response => response.text())
-    .then(result => {
-      // Traiter la réponse du serveur
-      return result === 'true';
-    })
-    .catch(error => {
-      console.error('Erreur lors de l\'envoi de la réservation :', error);
-      return false;
-    });
-}
+//   // Effectuer une requête GET pour envoyer les informations de réservation
+//   return fetch(urlForm)
+//     .then(response => response.text())
+//     .then(result => {
+//       // Traiter la réponse du serveur
+//       return result === 'true';
+//     })
+//     .catch(error => {
+//       console.error('Erreur lors de l\'envoi de la réservation :', error);
+//       return false;
+//     });
+// }
 
 
 // Gestionnaire d'événement pour le bouton de fermeture

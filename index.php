@@ -25,6 +25,7 @@ try {
     <link rel="stylesheet" href="style/chalet_card.css">
     <link rel="stylesheet" href="style/calendrier.css">
     <link rel="stylesheet" href="style/popup.css">
+    <link rel="stylesheet" href="style/formulaire.css">
 </head>
 <body>
   <?php
@@ -70,7 +71,13 @@ try {
 ?>
   <div class="popup" id="popup">
       <div class="popup-content">
-          <form action="/api/formulaire.php">
+          <form action="api/formulaire.php" method="GET">
+              <label for="chalet_id">chalet Id :</label>
+              <input type="text" id="chalet_id" name="chalet_id" required>
+
+              <label for="date_reservation">date :</label>
+              <input type="date" id="date_reservation" name="date_reservation" required>
+
               <label for="nom">Nom :</label>
               <input type="text" id="nom" name="nom" required>
           
@@ -97,8 +104,10 @@ try {
           
               <label for="all_in">All-in :</label>
               <input type="checkbox" id="all_in" name="all_in">
-          
+
               <input type="submit" value="Soumettre" id="button_submit">
+          
+              <!-- <div id="button_submit">Envoyer</div> -->
           </form>
           <button class="close-btn">Fermer</button>
       </div>

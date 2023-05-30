@@ -1,0 +1,12 @@
+1 - Connexion sécurisée (ça doit vous prendre 15 minutes max)
+2 - Bouton de déconnexion
+3 - DB contenant 10-15 mots
+4 - EN BACK : Tirer un mot au hasard (chercher avec la fonction sql RAND() )
+5 - EN FRONT : Afficher des cases vides (une case par lettre)
+6 - l'utilisateur clique sur une lettre ou tape une lettre
+7 - Si la lettre est dans le mot -> lettre sur fond vert + lettre affichée dans les bonnes cases
+    Si la lettre n'est pas dans le mot -> lettre sur fond rouge + on perd 1 point
+8 - Si on a perdu 6 points, le jeu est fini et le mot s'affiche + message "PERDU!"
+    Si on trouve le mot, le temps de jeu est affiché avec un "BRAVO"
+9 - La partie est enregistrées : utilisateur, mot, date, heure, points restants, temps de jeu
+10 - L'utilisateur ne peut JAMAIS voir le mot (en inspectant la page, par exemple)

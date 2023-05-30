@@ -1,0 +1,28 @@
+
+
+1) Coté utilisateur 1 - émetteur
+
+- Connexion
+- Choisir un destinataire
+- Afficher la discussion avec ce destinataire
+- Envoyer un message
+
+2) Coté utilisateur 2 - destinataire
+- Connexion
+- Vous avez un nouveau message
+- Cliquer sur la discussion
+- Voir la discussion
+- Répondre au message
+
+3) Coté utilisateur 1
+- Le message reçu apparait automatiquement
+
+
+Les 2 utilisateurs peuvent chatter
+
+4) Options:
+- Discussion à 3 ou plus
+- Effets visuels et graphique sympa + like un message
+- Effacer un message
+- Système d'émoticones (au moins 3 différentes) dans le message
+- Tout le programme sous forme d'un module
